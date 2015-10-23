@@ -10,6 +10,9 @@ import UIKit
 
 class EntryTableViewController: UITableViewController {
 
+    let categoryNames = ["도서관", "체육시설", "공공시설 대관", "체험행사", "교육행사", "진료시설", "화장실"]
+    let categoryImageNames = ["library.jpg", "gymnasium.jpg", "public_center.jpg", "public_event.jpg", "education_event.jpg", "medical_service.jpg", "toilet.jpg"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,12 +32,37 @@ class EntryTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.categoryNames.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cellIdentifier = "Cell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! EntryTableViewCell
+        cell.categoryNameLabel?.text = categoryNames[indexPath.row]
+
+//        cell.backgroundImageView?.image = convertBlurImage(UIImage(named: categoryImageNames[indexPath.row])!)
+        cell.backgroundImageView?.image = UIImage(named: categoryImageNames[indexPath.row])
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        return cell
+    }
+/*
+    func convertBlurImage(image: UIImage) -> UIImage {
+        let imageToBlur = CIImage(image: image)
+        let blurFilter = CIFilter(name: "CIGaussianBlur")
+        blurFilter!.setValue("1", forKey: kCIInputRadiusKey)
+        blurFilter!.setValue(imageToBlur, forKey: "inputImage")
+        let resultImage = blurFilter?.valueForKey("outputImage") as! CIImage
+        let blurredImage = UIImage(CIImage: resultImage)
+        return blurredImage
+    }
+*/
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 
     /*
