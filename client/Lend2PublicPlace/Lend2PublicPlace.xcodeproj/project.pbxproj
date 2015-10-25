@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		AF48AC8C1BDA1C260040120D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48AC8B1BDA1C260040120D /* AppDelegate.swift */; };
-		AF48AC8E1BDA1C260040120D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48AC8D1BDA1C260040120D /* ViewController.swift */; };
 		AF48AC911BDA1C260040120D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF48AC8F1BDA1C260040120D /* Main.storyboard */; };
 		AF48AC931BDA1C260040120D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF48AC921BDA1C260040120D /* Assets.xcassets */; };
 		AF48AC961BDA1C260040120D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF48AC941BDA1C260040120D /* LaunchScreen.storyboard */; };
 		AF48ACA11BDA1C260040120D /* Lend2PublicPlaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48ACA01BDA1C260040120D /* Lend2PublicPlaceTests.swift */; };
 		AF48ACAC1BDA1C260040120D /* Lend2PublicPlaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48ACAB1BDA1C260040120D /* Lend2PublicPlaceUITests.swift */; };
+		AF48ACBA1BDA26A90040120D /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48ACB91BDA26A90040120D /* EntryTableViewController.swift */; };
+		AF48ACBB1BDA26A90040120D /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48ACB91BDA26A90040120D /* EntryTableViewController.swift */; };
+		AF48ACBC1BDA26A90040120D /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48ACB91BDA26A90040120D /* EntryTableViewController.swift */; };
+		AF48ACBE1BDA29000040120D /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48ACBD1BDA29000040120D /* EntryTableViewCell.swift */; };
+		AF48ACBF1BDA29000040120D /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48ACBD1BDA29000040120D /* EntryTableViewCell.swift */; };
+		AF48ACC01BDA29000040120D /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48ACBD1BDA29000040120D /* EntryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		AF48AC881BDA1C260040120D /* Lend2PublicPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lend2PublicPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF48AC8B1BDA1C260040120D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF48AC8D1BDA1C260040120D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF48AC901BDA1C260040120D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF48AC921BDA1C260040120D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF48AC951BDA1C260040120D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		AF48ACA71BDA1C260040120D /* Lend2PublicPlaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lend2PublicPlaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF48ACAB1BDA1C260040120D /* Lend2PublicPlaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lend2PublicPlaceUITests.swift; sourceTree = "<group>"; };
 		AF48ACAD1BDA1C260040120D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF48ACB91BDA26A90040120D /* EntryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewController.swift; sourceTree = "<group>"; };
+		AF48ACBD1BDA29000040120D /* EntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,9 @@
 		AF48AC8A1BDA1C260040120D /* Lend2PublicPlace */ = {
 			isa = PBXGroup;
 			children = (
+				AF48ACBD1BDA29000040120D /* EntryTableViewCell.swift */,
+				AF48ACB91BDA26A90040120D /* EntryTableViewController.swift */,
 				AF48AC8B1BDA1C260040120D /* AppDelegate.swift */,
-				AF48AC8D1BDA1C260040120D /* ViewController.swift */,
 				AF48AC8F1BDA1C260040120D /* Main.storyboard */,
 				AF48AC921BDA1C260040120D /* Assets.xcassets */,
 				AF48AC941BDA1C260040120D /* LaunchScreen.storyboard */,
@@ -256,7 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF48AC8E1BDA1C260040120D /* ViewController.swift in Sources */,
+				AF48ACBE1BDA29000040120D /* EntryTableViewCell.swift in Sources */,
+				AF48ACBA1BDA26A90040120D /* EntryTableViewController.swift in Sources */,
 				AF48AC8C1BDA1C260040120D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF48ACBF1BDA29000040120D /* EntryTableViewCell.swift in Sources */,
+				AF48ACBB1BDA26A90040120D /* EntryTableViewController.swift in Sources */,
 				AF48ACA11BDA1C260040120D /* Lend2PublicPlaceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF48ACC01BDA29000040120D /* EntryTableViewCell.swift in Sources */,
+				AF48ACBC1BDA26A90040120D /* EntryTableViewController.swift in Sources */,
 				AF48ACAC1BDA1C260040120D /* Lend2PublicPlaceUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +496,7 @@
 				AF48ACB21BDA1C260040120D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF48ACB31BDA1C260040120D /* Build configuration list for PBXNativeTarget "Lend2PublicPlaceTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +505,7 @@
 				AF48ACB51BDA1C260040120D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF48ACB61BDA1C260040120D /* Build configuration list for PBXNativeTarget "Lend2PublicPlaceUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +514,7 @@
 				AF48ACB81BDA1C260040120D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
