@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Lend2PublicPlace
+//  SeoulPublicPop
 //
-//  Created by pacilo on 2015. 10. 23..
+//  Created by pacilo on 2015. 10. 26..
 //  Copyright © 2015년 DAYEONSSI. All rights reserved.
 //
 
