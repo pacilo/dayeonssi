@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryModel {
+class Model {
 
     var title: String
     var backgroundImage: UIImage
@@ -25,16 +25,4 @@ class CategoryModel {
         self.init(title: title!, backgroundImage: backgroundImage!.decompressedImage)
     }
 
-}
-
-extension UIImage {
-    
-    var decompressedImage: UIImage {
-        UIGraphicsBeginImageContextWithOptions(size, true, 0)
-        drawAtPoint(CGPointZero)
-        let decompressedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return decompressedImage
-    }
-    
 }

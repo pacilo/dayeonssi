@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryList: CategoryModel {
+class CategoryList: Model {
     
     class func allCategory() -> [CategoryList] {
         var categoryList = [CategoryList]()
