@@ -19,8 +19,6 @@
 		AF76297D1BDF70B200AEE1C7 /* EntryLayoutDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76297C1BDF70B200AEE1C7 /* EntryLayoutDraw.swift */; };
 		AF76297F1BDF730B00AEE1C7 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76297E1BDF730B00AEE1C7 /* EntryViewController.swift */; };
 		AF7629821BDF81F200AEE1C7 /* Decompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7629811BDF81F200AEE1C7 /* Decompressor.swift */; };
-		CD3B553D1BDF919D0045324C /* PPCategoryAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3B553C1BDF919D0045324C /* PPCategoryAnnotation.swift */; };
-		CD3B553F1BDF92B60045324C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3B553E1BDF92B60045324C /* MapViewController.swift */; };
 		CD3B55421BDF94400045324C /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3B55411BDF94400045324C /* DataLoader.swift */; };
 		CD3B55461BDFAD650045324C /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3B55451BDFAD650045324C /* DataCenter.swift */; };
 		CD3B55481BDFAF1C0045324C /* RespondList.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD3B55471BDFAF1C0045324C /* RespondList.plist */; };
@@ -60,8 +58,6 @@
 		AF76297C1BDF70B200AEE1C7 /* EntryLayoutDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryLayoutDraw.swift; sourceTree = "<group>"; };
 		AF76297E1BDF730B00AEE1C7 /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		AF7629811BDF81F200AEE1C7 /* Decompressor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decompressor.swift; sourceTree = "<group>"; };
-		CD3B553C1BDF919D0045324C /* PPCategoryAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPCategoryAnnotation.swift; sourceTree = "<group>"; };
-		CD3B553E1BDF92B60045324C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CD3B55411BDF94400045324C /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		CD3B55451BDFAD650045324C /* DataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
 		CD3B55471BDFAF1C0045324C /* RespondList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RespondList.plist; sourceTree = "<group>"; };
@@ -176,8 +172,6 @@
 		CD3B553B1BDF90BA0045324C /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				CD3B553C1BDF919D0045324C /* PPCategoryAnnotation.swift */,
-				CD3B553E1BDF92B60045324C /* MapViewController.swift */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -331,10 +325,8 @@
 				AF76297B1BDF687300AEE1C7 /* CategoryTableCell.swift in Sources */,
 				AF4F9B2A1BDE5FF700F88352 /* AppDelegate.swift in Sources */,
 				AF7629741BDF659800AEE1C7 /* Model.swift in Sources */,
-				CD3B553F1BDF92B60045324C /* MapViewController.swift in Sources */,
 				AF7629821BDF81F200AEE1C7 /* Decompressor.swift in Sources */,
 				AF7629761BDF66AF00AEE1C7 /* CategoryList.swift in Sources */,
-				CD3B553D1BDF919D0045324C /* PPCategoryAnnotation.swift in Sources */,
 				AF76297F1BDF730B00AEE1C7 /* EntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
