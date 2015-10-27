@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Category-location</key>
+	<array>
+		<string>category</string>
+		<string>local</string>
+		<string>name</string>
+		<string>pos</string>
+		<string>website</string>
+		<string>readaddr</string>
+		<string>phone</string>
+	</array>
+</dict>
+</plist>
