@@ -22,6 +22,8 @@
 		CD3B55421BDF94400045324C /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3B55411BDF94400045324C /* DataLoader.swift */; };
 		CD3B55461BDFAD650045324C /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3B55451BDFAD650045324C /* DataCenter.swift */; };
 		CD3B55481BDFAF1C0045324C /* RespondList.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD3B55471BDFAF1C0045324C /* RespondList.plist */; };
+		CD492B281BDFC0C9006203F2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD492B261BDFC0C9006203F2 /* MapViewController.swift */; };
+		CD492B291BDFC0C9006203F2 /* PPCategoryAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD492B271BDFC0C9006203F2 /* PPCategoryAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		CD3B55411BDF94400045324C /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		CD3B55451BDFAD650045324C /* DataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
 		CD3B55471BDFAF1C0045324C /* RespondList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RespondList.plist; sourceTree = "<group>"; };
+		CD492B261BDFC0C9006203F2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CD492B271BDFC0C9006203F2 /* PPCategoryAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPCategoryAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,8 @@
 		CD3B553B1BDF90BA0045324C /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				CD492B261BDFC0C9006203F2 /* MapViewController.swift */,
+				CD492B271BDFC0C9006203F2 /* PPCategoryAnnotation.swift */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -320,8 +326,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD3B55421BDF94400045324C /* DataLoader.swift in Sources */,
+				CD492B291BDFC0C9006203F2 /* PPCategoryAnnotation.swift in Sources */,
 				AF76297D1BDF70B200AEE1C7 /* EntryLayoutDraw.swift in Sources */,
 				CD3B55461BDFAD650045324C /* DataCenter.swift in Sources */,
+				CD492B281BDFC0C9006203F2 /* MapViewController.swift in Sources */,
 				AF76297B1BDF687300AEE1C7 /* CategoryTableCell.swift in Sources */,
 				AF4F9B2A1BDE5FF700F88352 /* AppDelegate.swift in Sources */,
 				AF7629741BDF659800AEE1C7 /* Model.swift in Sources */,
