@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gi5-eq-qj2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4fM-pe-Iwl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -17,7 +17,7 @@
                         <collectionViewLayout key="collectionViewLayout" id="l6S-ab-jJ7" customClass="EntryLayoutDraw" customModule="SeoulPublicPop" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryTableCell" id="n3U-hs-Bjw" customClass="CategoryTableCell" customModule="SeoulPublicPop" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <rect key="frame" x="0.0" y="64" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -67,14 +67,78 @@
                                     <outlet property="imageCoverView" destination="TtC-0H-Spg" id="euq-Yt-XNO"/>
                                     <outlet property="imageView" destination="JTE-UP-31u" id="I0c-Sj-Pwx"/>
                                     <outlet property="titleLabel" destination="ube-11-tcI" id="U6f-3X-9bY"/>
+                                    <segue destination="yjc-AX-YUH" kind="show" id="juj-EP-FlL"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="K4V-pk-rzZ"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9E-Uw-G83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="544" y="432"/>
+            <point key="canvasLocation" x="1074" y="236"/>
+        </scene>
+        <!--Navigation Bar Controller View Controller-->
+        <scene sceneID="kfi-PA-pXX">
+            <objects>
+                <navigationController id="4fM-pe-Iwl" customClass="NavigationBarControllerViewController" customModule="SeoulPublicPop" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sZA-Vy-Aok">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Gi5-eq-qj2" kind="relationship" relationship="rootViewController" id="n7s-rM-ts4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjL-oN-jIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384" y="236"/>
+        </scene>
+        <!--Category-->
+        <scene sceneID="wT9-gl-cyq">
+            <objects>
+                <viewController id="yjc-AX-YUH" customClass="LocalSectionViewController" customModule="SeoulPublicPop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FNK-4S-Svg"/>
+                        <viewControllerLayoutGuide type="bottom" id="BJ8-py-A7S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sIj-xe-frB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="miL-Fb-nfJ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21z-ff-mQJ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Category" id="JKi-us-T0Z"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="leading" secondItem="21z-ff-mQJ" secondAttribute="leading" id="1tX-Ic-QEc"/>
+                            <constraint firstAttribute="trailing" secondItem="miL-Fb-nfJ" secondAttribute="trailing" id="3jJ-v6-rvE"/>
+                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="trailing" secondItem="21z-ff-mQJ" secondAttribute="trailing" id="C0l-br-Cpi"/>
+                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="top" secondItem="21z-ff-mQJ" secondAttribute="bottom" id="IXN-mu-f8M"/>
+                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="bottom" secondItem="BJ8-py-A7S" secondAttribute="top" id="QA0-Vd-0Bo"/>
+                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="leading" secondItem="sIj-xe-frB" secondAttribute="leading" id="kC7-jE-cO5"/>
+                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="top" secondItem="FNK-4S-Svg" secondAttribute="bottom" id="yjb-ch-GYw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Category" id="iLf-IW-NzQ"/>
+                    <connections>
+                        <outlet property="seoulMapImage" destination="miL-Fb-nfJ" id="Y48-Nn-TcJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="odt-By-gyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1746" y="236"/>
         </scene>
     </scenes>
 </document>
