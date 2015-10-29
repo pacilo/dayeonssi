@@ -19,6 +19,8 @@
 		AF76297B1BDF687300AEE1C7 /* CategoryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76297A1BDF687300AEE1C7 /* CategoryTableCell.swift */; };
 		AF76297D1BDF70B200AEE1C7 /* EntryLayoutDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76297C1BDF70B200AEE1C7 /* EntryLayoutDraw.swift */; };
 		AF76297F1BDF730B00AEE1C7 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76297E1BDF730B00AEE1C7 /* EntryViewController.swift */; };
+		AFC8CD181BE218BE00359B14 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8CD161BE218BE00359B14 /* DataCenter.swift */; };
+		AFC8CD191BE218BE00359B14 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8CD171BE218BE00359B14 /* DataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		AF76297A1BDF687300AEE1C7 /* CategoryTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableCell.swift; sourceTree = "<group>"; };
 		AF76297C1BDF70B200AEE1C7 /* EntryLayoutDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryLayoutDraw.swift; sourceTree = "<group>"; };
 		AF76297E1BDF730B00AEE1C7 /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		AFC8CD161BE218BE00359B14 /* DataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
+		AFC8CD171BE218BE00359B14 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		AF4F9B281BDE5FF700F88352 /* SeoulPublicPop */ = {
 			isa = PBXGroup;
 			children = (
+				AFC8CD151BE218AB00359B14 /* Network */,
 				AF7629691BDF630900AEE1C7 /* Storyboard & Xib */,
 				AF76296B1BDF634800AEE1C7 /* Resources */,
 				AF76296C1BDF635600AEE1C7 /* Other */,
@@ -166,6 +171,15 @@
 				AF76297E1BDF730B00AEE1C7 /* EntryViewController.swift */,
 			);
 			name = EntryPoint;
+			sourceTree = "<group>";
+		};
+		AFC8CD151BE218AB00359B14 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AFC8CD161BE218BE00359B14 /* DataCenter.swift */,
+				AFC8CD171BE218BE00359B14 /* DataLoader.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +321,9 @@
 				AF7629741BDF659800AEE1C7 /* Model.swift in Sources */,
 				AF07257B1BE0EDF60033D172 /* LocalSectionViewController.swift in Sources */,
 				AF7629761BDF66AF00AEE1C7 /* CategoryList.swift in Sources */,
+				AFC8CD181BE218BE00359B14 /* DataCenter.swift in Sources */,
 				AF76297F1BDF730B00AEE1C7 /* EntryViewController.swift in Sources */,
+				AFC8CD191BE218BE00359B14 /* DataLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,6 +46,7 @@ class EntryViewController: UICollectionViewController {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+
 }
 
 extension EntryViewController {
