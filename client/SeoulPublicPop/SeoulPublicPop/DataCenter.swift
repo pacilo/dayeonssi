@@ -10,6 +10,7 @@ import Foundation
 
 class DataCenter
 {
+    
     static func DataRequest(category : String, local_pos : String, data_range : (limits : Int,offset :Int)) ->(req : [String:String], res : [String])
     {
         var reqList = [String:String]()

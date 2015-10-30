@@ -11,7 +11,7 @@ import MapKit
 
 class MapViewController : UIViewController, CLLocationManagerDelegate{
     var locationManager:CLLocationManager!
-    
+    var annotationDic : [String:PPMapAnnotation] = [:]
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
@@ -23,12 +23,12 @@ class MapViewController : UIViewController, CLLocationManagerDelegate{
        // let latDelta = circle2.latitude - circle.latitude
 
         //print(fabs(latDelta))
-        let span = MKCoordinateSpanMake(0.005, 0.0)
+        let span = MKCoordinateSpanMake(0.005, 0)
         
         let region = MKCoordinateRegionMake(circle, span)
         
+        mapView.showsUserLocation = true
         mapView.region = region
-        
         addCategoryPins()
         
             
@@ -63,14 +63,17 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = PPMapAnnotationView(annotation: annotation, reuseIdentifier: "Attraction")
         annotationView.canShowCallout = true
+        
+        
         let calloutButton = UIButton(type: UIButtonType.DetailDisclosure)
         annotationView.rightCalloutAccessoryView = calloutButton
-        return nil
+        return annotationView
     }
-    
+    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        print("change \(mapView.region.span) chnage = \(mapView.region.center) ")
+    }
     func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
     {
-        
         //get tag here
         /*  if(annotationView.tag == 0){
         //Do for 0 pin
@@ -83,6 +86,6 @@ extension MapViewController: MKMapViewDelegate {
         }
     }
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
-        
+   //     mapView.region.
     }
 }

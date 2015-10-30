@@ -24,4 +24,5 @@ class PPMapAnnotation : NSObject, MKAnnotation {
         self.category = category
     }
     
+    
 }
