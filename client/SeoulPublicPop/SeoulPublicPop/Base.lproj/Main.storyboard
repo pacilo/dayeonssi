@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4fM-pe-Iwl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4fM-pe-Iwl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -137,7 +137,7 @@
                                 <rect key="frame" x="447" y="7" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <state key="normal" title="MapView"/>
+                                <state key="normal" title="주변검색"/>
                                 <connections>
                                     <segue destination="RJA-oL-b4E" kind="show" id="JBh-DS-Gi2"/>
                                 </connections>
@@ -181,7 +181,10 @@
                                 <rect key="frame" x="447" y="7" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <state key="normal" title="DoNotWork"/>
+                                <state key="normal" title="지역검색"/>
+                                <connections>
+                                    <action selector="goBack" destination="FkA-ex-Yud" eventType="touchUpInside" id="O4f-F0-y6t"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
