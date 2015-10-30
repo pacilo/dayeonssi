@@ -24,7 +24,6 @@ class Model {
         let backgroundImage = UIImage(named: backgroundName!)
         self.init(title: title!, backgroundImage: backgroundImage!.decompressedImage)
     }
-
 }
 
 extension UIImage {
