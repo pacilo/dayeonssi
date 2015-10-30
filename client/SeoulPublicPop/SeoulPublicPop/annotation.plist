@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>다목적실</key>
+	<string></string>
+	<key>체육시설</key>
+	<string></string>
+	<key>실습실</key>
+	<string></string>
+	<key>문화공연전시</key>
+	<string></string>
+	<key>세미나실</key>
+	<string></string>
+	<key>화장실</key>
+	<string></string>
+</dict>
+</plist>

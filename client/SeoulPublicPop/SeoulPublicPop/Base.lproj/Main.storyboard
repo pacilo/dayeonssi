@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4fM-pe-Iwl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4fM-pe-Iwl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -139,7 +139,7 @@
                                 <animations/>
                                 <state key="normal" title="MapView"/>
                                 <connections>
-                                    <segue destination="RJA-oL-b4E" kind="show" id="jXa-H7-GdR"/>
+                                    <segue destination="RJA-oL-b4E" kind="show" id="JBh-DS-Gi2"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -152,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="1746" y="236"/>
         </scene>
-        <!--Category-->
+        <!--MapView-->
         <scene sceneID="8gx-QL-Mwe">
             <objects>
-                <viewController id="RJA-oL-b4E" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController id="RJA-oL-b4E" customClass="MapViewController" customModule="SeoulPublicPop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bOc-Sn-hEO"/>
                         <viewControllerLayoutGuide type="bottom" id="x8e-YM-wQr"/>
@@ -164,21 +164,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="U5A-Ds-gpg">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wey-UP-qHP">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="RJA-oL-b4E" id="dTr-aF-MdH"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="U5A-Ds-gpg" secondAttribute="trailing" id="IbF-mN-FeD"/>
-                            <constraint firstItem="U5A-Ds-gpg" firstAttribute="bottom" secondItem="x8e-YM-wQr" secondAttribute="top" id="Ncc-Cz-ijr"/>
-                            <constraint firstItem="U5A-Ds-gpg" firstAttribute="leading" secondItem="p71-c1-qDI" secondAttribute="leading" id="NtQ-vY-ddc"/>
-                            <constraint firstItem="U5A-Ds-gpg" firstAttribute="top" secondItem="bOc-Sn-hEO" secondAttribute="bottom" id="Tcj-rs-G4T"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Category" id="daC-c2-AiY">
+                    <navigationItem key="navigationItem" title="MapView" id="daC-c2-AiY">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="PvK-Ie-krE">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pif-DI-1EI">
                                 <rect key="frame" x="447" y="7" width="133" height="30"/>
@@ -188,6 +185,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="wey-UP-qHP" id="Mic-G6-S36"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FkA-ex-Yud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
