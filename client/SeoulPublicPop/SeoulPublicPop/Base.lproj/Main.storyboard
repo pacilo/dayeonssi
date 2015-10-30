@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--Entry View Controller-->
+        <!--카테고리-->
         <scene sceneID="GAb-ki-uCL">
             <objects>
                 <collectionViewController id="Gi5-eq-qj2" customClass="EntryViewController" customModule="SeoulPublicPop" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,7 +72,7 @@
                             </collectionViewCell>
                         </cells>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="K4V-pk-rzZ"/>
+                    <navigationItem key="navigationItem" title="카테고리" id="K4V-pk-rzZ"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9E-Uw-G83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,7 +95,7 @@
             </objects>
             <point key="canvasLocation" x="384" y="236"/>
         </scene>
-        <!--Category-->
+        <!--지역검색-->
         <scene sceneID="wT9-gl-cyq">
             <objects>
                 <viewController id="yjc-AX-YUH" customClass="LocalSectionViewController" customModule="SeoulPublicPop" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,7 +131,7 @@
                             <constraint firstItem="miL-Fb-nfJ" firstAttribute="bottom" secondItem="BJ8-py-A7S" secondAttribute="top" id="uLQ-YF-Mg3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Category" id="iLf-IW-NzQ">
+                    <navigationItem key="navigationItem" title="지역검색" id="iLf-IW-NzQ">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="xo4-17-myd">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yqk-nB-c7g">
                                 <rect key="frame" x="447" y="7" width="133" height="30"/>
@@ -152,7 +152,7 @@
             </objects>
             <point key="canvasLocation" x="1746" y="236"/>
         </scene>
-        <!--MapView-->
+        <!--주변검색-->
         <scene sceneID="8gx-QL-Mwe">
             <objects>
                 <viewController id="RJA-oL-b4E" customClass="MapViewController" customModule="SeoulPublicPop" customModuleProvider="target" sceneMemberID="viewController">
@@ -175,19 +175,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="MapView" id="daC-c2-AiY">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="PvK-Ie-krE">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pif-DI-1EI">
-                                <rect key="frame" x="447" y="7" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <state key="normal" title="지역검색"/>
-                                <connections>
-                                    <action selector="goBack" destination="FkA-ex-Yud" eventType="touchUpInside" id="O4f-F0-y6t"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="주변검색" id="daC-c2-AiY"/>
                     <connections>
                         <outlet property="mapView" destination="wey-UP-qHP" id="Mic-G6-S36"/>
                     </connections>

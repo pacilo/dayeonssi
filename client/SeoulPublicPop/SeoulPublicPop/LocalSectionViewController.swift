@@ -24,6 +24,10 @@ class LocalSectionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
