@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 class PPMapAnnotationView: MKAnnotationView {
+    var countlabel : UILabel?
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
@@ -29,13 +30,13 @@ class PPMapAnnotationView: MKAnnotationView {
             layer.cornerRadius = frame.size.width / 2
             backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0)
         
-        let label = UILabel(frame: frame)
-        label.text = "1"
-        label.textAlignment = NSTextAlignment.Center
-        label.textColor = UIColor(red: CGFloat(0xff)/255, green: CGFloat(0xd7)/255, blue: CGFloat(0x00)/255, alpha: 1)
-        label.center = CGPointMake(frame.size.width  / 2, frame.size.height / 2);
+        countlabel = UILabel(frame: frame)
+        countlabel!.text = String((annotation as! PPMapAnnotation).getMyCount())
+        countlabel!.textAlignment = NSTextAlignment.Center
+        countlabel!.textColor = UIColor(red: CGFloat(0xff)/255, green: CGFloat(0xd7)/255, blue: CGFloat(0x00)/255, alpha: 1)
+        countlabel!.center = CGPointMake(frame.size.width  / 2, frame.size.height / 2);
         //label.sizeToFit()
-        addSubview(label)
+        addSubview(countlabel!)
         //   }
     }
 }

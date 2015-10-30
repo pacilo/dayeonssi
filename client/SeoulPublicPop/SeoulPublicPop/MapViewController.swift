@@ -29,9 +29,6 @@ class MapViewController : UIViewController, CLLocationManagerDelegate{
         
         mapView.showsUserLocation = true
         mapView.region = region
-        addCategoryPins()
-        
-            
 
         // Do any additional setup after loading the view, typically from a nib.
         locationManager = CLLocationManager()
@@ -49,28 +46,69 @@ class MapViewController : UIViewController, CLLocationManagerDelegate{
     해당 정보에 대해서 모든 정보가 로딩 됐을 때 이 함수를 콜벡으로 호출하게 된다.
 */
 extension MapViewController: MKMapViewDelegate {
-    func addCategoryPins() {
-        
-        let point = CGPointFromString("{37.57005053895507,126.96868562891434}")
-        let coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(point.x), CLLocationDegrees(point.y))
-        let title = "test"
-        let category = "test"
-        let subtitle = "test"
-        let annotation = PPMapAnnotation(coordinate: coordinate, title: title, subtitle: subtitle,category : category)
-        mapView.addAnnotation(annotation)
-        
-    }
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = PPMapAnnotationView(annotation: annotation, reuseIdentifier: "Attraction")
         annotationView.canShowCallout = true
         
-        
         let calloutButton = UIButton(type: UIButtonType.DetailDisclosure)
         annotationView.rightCalloutAccessoryView = calloutButton
+        
+        (annotation as! PPMapAnnotation).myview = annotationView
+        
         return annotationView
     }
+    
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        print("change \(mapView.region.span) chnage = \(mapView.region.center) ")
+        //파라미터를 준비한다.
+        let param = DataCenter.DataRequest("다목적실", local_pos: "중랑구", data_range: (limits: 30, offset: 60))
+        
+        //로드할 객체를 생성한다.
+        let loader = DataLoader()
+        
+        //로드를 시작한다. 로드 완료 후 콜백 메소드를 호출한다. 현재 이는 클로저로 호출되고 있음
+        loader.Start(param.req, resParam: param.res, startend: "info",callBack: { (output : [[String : AnyObject?]]?) -> () in
+            for a in output!
+            {
+                if self.annotationDic[a["id"] as! String] == nil
+                {
+                    let point = CGPointFromString(a["pos"]as! String)
+                    let coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(point.x), CLLocationDegrees(point.y))
+                    let title = a["name"] as! String
+                    let category = a["category"] as! String
+                    let subtitle = a["category"] as! String
+                    let annotation = PPMapAnnotation(coordinate: coordinate, title: title, subtitle: subtitle,category : category, id: a["id"] as! String)
+                    self.annotationDic[a["id"] as! String] = annotation
+                    mapView.addAnnotation(annotation)
+                }
+            }
+        })
+        for anno in mapView.annotations
+        {
+            var a = anno as! PPMapAnnotation
+            if a.ischild == false
+            {
+          //      var tempArr = [MKAnnotation]()
+                for c in mapView.annotations
+                {
+                    if a != c as! PPMapAnnotation
+                    {
+                        let child = c as! PPMapAnnotation
+                        if a.canBeChild(child, _span: mapView.region.span)
+                        {
+                            a.addChildAnnotation(child)
+                            mapView.removeAnnotation(c)
+                        }
+                    }
+                }
+            }
+        }
+        
+        for anno in mapView.annotations
+        {
+            let a  = anno as! PPMapAnnotation
+            
+            a.releaseAnnotation(mapView, span: mapView.region.span)
+        }
     }
     func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
     {

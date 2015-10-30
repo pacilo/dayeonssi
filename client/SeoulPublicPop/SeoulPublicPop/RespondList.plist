@@ -4,6 +4,7 @@
 <dict>
 	<key>Category-location</key>
 	<array>
+		<string>id</string>
 		<string>category</string>
 		<string>local</string>
 		<string>name</string>
