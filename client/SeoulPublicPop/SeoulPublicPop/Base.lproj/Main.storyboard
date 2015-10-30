@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="1074" y="236"/>
         </scene>
-        <!--Navigation Bar Controller View Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="kfi-PA-pXX">
             <objects>
-                <navigationController id="4fM-pe-Iwl" customClass="NavigationBarControllerViewController" customModule="SeoulPublicPop" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="4fM-pe-Iwl" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sZA-Vy-Aok">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -122,16 +122,28 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="leading" secondItem="21z-ff-mQJ" secondAttribute="leading" id="1tX-Ic-QEc"/>
-                            <constraint firstAttribute="trailing" secondItem="miL-Fb-nfJ" secondAttribute="trailing" id="3jJ-v6-rvE"/>
-                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="trailing" secondItem="21z-ff-mQJ" secondAttribute="trailing" id="C0l-br-Cpi"/>
-                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="top" secondItem="21z-ff-mQJ" secondAttribute="bottom" id="IXN-mu-f8M"/>
-                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="bottom" secondItem="BJ8-py-A7S" secondAttribute="top" id="QA0-Vd-0Bo"/>
-                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="leading" secondItem="sIj-xe-frB" secondAttribute="leading" id="kC7-jE-cO5"/>
-                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="top" secondItem="FNK-4S-Svg" secondAttribute="bottom" id="yjb-ch-GYw"/>
+                            <constraint firstItem="21z-ff-mQJ" firstAttribute="leading" secondItem="sIj-xe-frB" secondAttribute="leading" id="7wF-Lt-pwR"/>
+                            <constraint firstAttribute="trailing" secondItem="21z-ff-mQJ" secondAttribute="trailing" id="Ehx-fK-2V5"/>
+                            <constraint firstItem="21z-ff-mQJ" firstAttribute="trailing" secondItem="miL-Fb-nfJ" secondAttribute="trailing" id="EoB-aX-GkQ"/>
+                            <constraint firstItem="21z-ff-mQJ" firstAttribute="leading" secondItem="miL-Fb-nfJ" secondAttribute="leading" id="M3A-YV-GKG"/>
+                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="top" secondItem="FNK-4S-Svg" secondAttribute="bottom" id="neu-d6-cdU"/>
+                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="top" secondItem="21z-ff-mQJ" secondAttribute="bottom" id="u9z-79-fZi"/>
+                            <constraint firstItem="miL-Fb-nfJ" firstAttribute="bottom" secondItem="BJ8-py-A7S" secondAttribute="top" id="uLQ-YF-Mg3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Category" id="iLf-IW-NzQ"/>
+                    <navigationItem key="navigationItem" title="Category" id="iLf-IW-NzQ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="xo4-17-myd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yqk-nB-c7g">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="MapView"/>
+                                <connections>
+                                    <segue destination="RJA-oL-b4E" kind="show" id="jXa-H7-GdR"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="seoulMapImage" destination="miL-Fb-nfJ" id="Y48-Nn-TcJ"/>
                     </connections>
@@ -139,6 +151,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odt-By-gyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1746" y="236"/>
+        </scene>
+        <!--Category-->
+        <scene sceneID="8gx-QL-Mwe">
+            <objects>
+                <viewController id="RJA-oL-b4E" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bOc-Sn-hEO"/>
+                        <viewControllerLayoutGuide type="bottom" id="x8e-YM-wQr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p71-c1-qDI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="U5A-Ds-gpg">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                            </mapView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="U5A-Ds-gpg" secondAttribute="trailing" id="IbF-mN-FeD"/>
+                            <constraint firstItem="U5A-Ds-gpg" firstAttribute="bottom" secondItem="x8e-YM-wQr" secondAttribute="top" id="Ncc-Cz-ijr"/>
+                            <constraint firstItem="U5A-Ds-gpg" firstAttribute="leading" secondItem="p71-c1-qDI" secondAttribute="leading" id="NtQ-vY-ddc"/>
+                            <constraint firstItem="U5A-Ds-gpg" firstAttribute="top" secondItem="bOc-Sn-hEO" secondAttribute="bottom" id="Tcj-rs-G4T"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Category" id="daC-c2-AiY">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="PvK-Ie-krE">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pif-DI-1EI">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="DoNotWork"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FkA-ex-Yud" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1746" y="975"/>
         </scene>
     </scenes>
 </document>

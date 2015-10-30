@@ -11,6 +11,7 @@
 		AF4F9B2A1BDE5FF700F88352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4F9B291BDE5FF700F88352 /* AppDelegate.swift */; };
 		AF4F9B2F1BDE5FF700F88352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4F9B2D1BDE5FF700F88352 /* Main.storyboard */; };
 		AF4F9B311BDE5FF700F88352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF4F9B301BDE5FF700F88352 /* Assets.xcassets */; };
+		AF75FE921BE3078300007E5C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF75FE911BE3078300007E5C /* MapViewController.swift */; };
 		AF7629621BDF60C200AEE1C7 /* Category.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF7629611BDF60C200AEE1C7 /* Category.plist */; };
 		AF7629641BDF614B00AEE1C7 /* BackgroundImg.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7629631BDF614B00AEE1C7 /* BackgroundImg.xcassets */; };
 		AF7629681BDF62D300AEE1C7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7629661BDF62D300AEE1C7 /* LaunchScreen.xib */; };
@@ -49,6 +50,7 @@
 		AF4F9B351BDE5FF700F88352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF4F9B3A1BDE5FF700F88352 /* SeoulPublicPopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeoulPublicPopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4F9B451BDE5FF700F88352 /* SeoulPublicPopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeoulPublicPopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF75FE911BE3078300007E5C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AF7629611BDF60C200AEE1C7 /* Category.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Category.plist; sourceTree = "<group>"; };
 		AF7629631BDF614B00AEE1C7 /* BackgroundImg.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BackgroundImg.xcassets; sourceTree = "<group>"; };
 		AF7629671BDF62D300AEE1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -121,9 +123,18 @@
 				AF76296C1BDF635600AEE1C7 /* Other */,
 				AF7629771BDF676B00AEE1C7 /* CategoryModel */,
 				AF7629801BDF750500AEE1C7 /* EntryPoint */,
+				AF75FE931BE3078B00007E5C /* MapSelection */,
 				AF07257C1BE0EE490033D172 /* LocalSection */,
 			);
 			path = SeoulPublicPop;
+			sourceTree = "<group>";
+		};
+		AF75FE931BE3078B00007E5C /* MapSelection */ = {
+			isa = PBXGroup;
+			children = (
+				AF75FE911BE3078300007E5C /* MapViewController.swift */,
+			);
+			name = MapSelection;
 			sourceTree = "<group>";
 		};
 		AF7629691BDF630900AEE1C7 /* Storyboard & Xib */ = {
@@ -318,6 +329,7 @@
 				AF76297D1BDF70B200AEE1C7 /* EntryLayoutDraw.swift in Sources */,
 				AF76297B1BDF687300AEE1C7 /* CategoryTableCell.swift in Sources */,
 				AF4F9B2A1BDE5FF700F88352 /* AppDelegate.swift in Sources */,
+				AF75FE921BE3078300007E5C /* MapViewController.swift in Sources */,
 				AF7629741BDF659800AEE1C7 /* Model.swift in Sources */,
 				AF07257B1BE0EDF60033D172 /* LocalSectionViewController.swift in Sources */,
 				AF7629761BDF66AF00AEE1C7 /* CategoryList.swift in Sources */,
