@@ -25,18 +25,30 @@ class PPMapAnnotationView: MKAnnotationView {
         
      //   if self.annotation is PPMapAnnotation
     //   {
-            let ppano = self.annotation as! PPMapAnnotation
-            image = UIImage(named : "testAnnotationIcon")
-            layer.cornerRadius = frame.size.width / 2
-            backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0)
+        let ppano = self.annotation as! PPMapAnnotation
+        image = imageResize(UIImage(named : "testAnnotationIcon")!,sizeChange: CGSize(width:50, height: 50))
+        layer.cornerRadius = frame.size.width / 2
+        backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0)
         
         countlabel = UILabel(frame: frame)
         countlabel!.text = String((annotation as! PPMapAnnotation).getMyCount())
         countlabel!.textAlignment = NSTextAlignment.Center
         countlabel!.textColor = UIColor(red: CGFloat(0xff)/255, green: CGFloat(0xd7)/255, blue: CGFloat(0x00)/255, alpha: 1)
         countlabel!.center = CGPointMake(frame.size.width  / 2, frame.size.height / 2);
-        //label.sizeToFit()
+        
         addSubview(countlabel!)
         //   }
+    }
+    func imageResize(imageObj:UIImage, sizeChange:CGSize)-> UIImage {
+        
+        let hasAlpha = true
+        let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
+        
+        UIGraphicsBeginImageContextWithOptions(sizeChange, !hasAlpha, scale)
+        imageObj.drawInRect(CGRect(origin: CGPointZero, size: sizeChange))
+        
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext() // !!!
+        return scaledImage
     }
 }

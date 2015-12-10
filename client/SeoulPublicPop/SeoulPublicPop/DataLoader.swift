@@ -7,10 +7,10 @@
 //
 
 import Foundation
-
+import UIKit
 class DataLoader : NSObject, NSXMLParserDelegate {
     
-    var server_url = "http://54.64.30.51/"
+    var server_url = "http://52.68.68.177:8080"
     var completeMethod : (([[String:AnyObject?]]?) ->())?
     var specialParseMethod : ((String,String) -> AnyObject?)?
     var startEnd : String?
@@ -34,7 +34,8 @@ class DataLoader : NSObject, NSXMLParserDelegate {
                         callBack :([[String:AnyObject?]]?) ->(),
                         specialParser : ((String,String) -> AnyObject?)? = nil)
     {
-        var paramString = "\(server_url)/?"
+        //var paramString = "\(server_url)/?"
+        var paramString = ""
         var first = 0
         for key in reqParam.keys
         {
@@ -46,6 +47,7 @@ class DataLoader : NSObject, NSXMLParserDelegate {
             
             paramString += "\(key)=\(reqParam[key]!)"
         }
+        print(paramString)
         startEnd = startend
         completeMethod = callBack
         specialParseMethod = specialParser

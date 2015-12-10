@@ -59,12 +59,11 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        //파라미터를 준비한다.
+        //파라미터를 준비한다.ß
         let param = DataCenter.DataRequest("다목적실", local_pos: "중랑구", data_range: (limits: 30, offset: 60))
         
         //로드할 객체를 생성한다.
         let loader = DataLoader()
-        
         //로드를 시작한다. 로드 완료 후 콜백 메소드를 호출한다. 현재 이는 클로저로 호출되고 있음
         loader.Start(param.req, resParam: param.res, startend: "info",callBack: { (output : [[String : AnyObject?]]?) -> () in
             for a in output!
@@ -84,19 +83,25 @@ extension MapViewController: MKMapViewDelegate {
         })
         for anno in mapView.annotations
         {
-            var a = anno as! PPMapAnnotation
-            if a.ischild == false
+            if anno is PPMapAnnotation
             {
-          //      var tempArr = [MKAnnotation]()
-                for c in mapView.annotations
+                let a = anno as! PPMapAnnotation
+                if a.ischild == false
                 {
-                    if a != c as! PPMapAnnotation
+              //      var tempArr = [MKAnnotation]()
+                    for c in mapView.annotations
                     {
-                        let child = c as! PPMapAnnotation
-                        if a.canBeChild(child, _span: mapView.region.span)
+                        if c is PPMapAnnotation
                         {
-                            a.addChildAnnotation(child)
-                            mapView.removeAnnotation(c)
+                            if a != c as! PPMapAnnotation
+                            {
+                                let child = c as! PPMapAnnotation
+                                if a.canBeChild(child, _span: mapView.region.span)
+                                {
+                                    a.addChildAnnotation(child)
+                                    mapView.removeAnnotation(c)
+                                }
+                            }
                         }
                     }
                 }
