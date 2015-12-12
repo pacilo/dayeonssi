@@ -34,8 +34,8 @@ class DataLoader : NSObject, NSXMLParserDelegate {
                         callBack :([[String:AnyObject?]]?) ->(),
                         specialParser : ((String,String) -> AnyObject?)? = nil)
     {
-        //var paramString = "\(server_url)/?"
-        var paramString = ""
+        var paramString = "\(server_url)/?"
+        //var paramString = ""
         var first = 0
         for key in reqParam.keys
         {

@@ -110,9 +110,11 @@ extension MapViewController: MKMapViewDelegate {
         
         for anno in mapView.annotations
         {
-            let a  = anno as! PPMapAnnotation
-            
-            a.releaseAnnotation(mapView, span: mapView.region.span)
+            if anno is PPMapAnnotation
+            {
+                let a  = anno as! PPMapAnnotation
+                a.releaseAnnotation(mapView, span: mapView.region.span)
+            }
         }
     }
     func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
